@@ -14,14 +14,19 @@
             "name": "Sebastian Bergmann",
             "email": "sebastian@phpunit.de",
             "role": "lead"
+        },
+        {
+            "name": "Lei Fan",
+            "email": "leif@adventresources.com",
+            "role": "developer"
         }
     ],
     "support": {
         "issues": "https://github.com/sebastianbergmann/dbunit/issues"
     },
     "require": {
-        "php": "^7.1",
-        "phpunit/phpunit": "^7.0",
+        "php": ">=7.1",
+        "phpunit/phpunit": ">=7.0",
         "symfony/yaml": "^3.0 || ^4.0",
         "ext-pdo": "*",
         "ext-simplexml": "*"
