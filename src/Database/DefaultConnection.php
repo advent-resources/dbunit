@@ -48,8 +48,10 @@ class DefaultConnection implements Connection
 
     /**
      * Close this connection.
+     *
+     * @return void
      */
-    public function close(): void
+    public function close()
     {
         unset($this->connection, $this->metaData);
     }

@@ -125,7 +125,10 @@ class QueryTable extends AbstractTable
         return parent::matches($other);
     }
 
-    protected function loadData(): void
+    /**
+     * @return void
+     */
+    protected function loadData()
     {
         if ($this->data === null) {
             $pdoStatement = $this->databaseConnection->getConnection()->query($this->query);
@@ -133,7 +136,10 @@ class QueryTable extends AbstractTable
         }
     }
 
-    protected function createTableMetaData(): void
+    /**
+     * @return void
+     */
+    protected function createTableMetaData()
     {
         if ($this->tableMetaData === null) {
             $this->loadData();
