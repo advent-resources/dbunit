@@ -69,8 +69,7 @@ class DefaultTableIterator implements ITableIterator
      *
      * @return ITable
      */
-    #[\ReturnTypeWillChange]
-    public function current()
+    public function current(): mixed
     {
         return \current($this->tables);
     }
@@ -80,8 +79,7 @@ class DefaultTableIterator implements ITableIterator
      *
      * @return string
      */
-    #[\ReturnTypeWillChange]
-    public function key()
+    public function key(): mixed
     {
         return $this->current()->getTableMetaData()->getTableName();
     }
@@ -89,7 +87,6 @@ class DefaultTableIterator implements ITableIterator
     /**
      * advances to the next element.
      */
-    #[\ReturnTypeWillChange]
     public function next(): void
     {
         if ($this->reverse) {
@@ -102,7 +99,6 @@ class DefaultTableIterator implements ITableIterator
     /**
      * Rewinds to the first element
      */
-    #[\ReturnTypeWillChange]
     public function rewind(): void
     {
         if ($this->reverse) {
@@ -114,11 +110,8 @@ class DefaultTableIterator implements ITableIterator
 
     /**
      * Returns true if the current index is valid
-     *
-     * @return bool
      */
-    #[\ReturnTypeWillChange]
-    public function valid()
+    public function valid(): bool
     {
         return $this->current() !== false;
     }
