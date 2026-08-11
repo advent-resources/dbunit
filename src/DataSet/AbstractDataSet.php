@@ -76,11 +76,8 @@ abstract class AbstractDataSet implements IDataSet
 
     /**
      * Returns an iterator for all table objects in the given dataset.
-     *
-     * @return ITableIterator
      */
-    #[\ReturnTypeWillChange]
-    public function getIterator()
+    public function getIterator(): ITableIterator
     {
         return $this->createIterator();
     }
