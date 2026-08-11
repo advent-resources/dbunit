@@ -15,6 +15,10 @@ namespace PHPUnit\DbUnit\Database\Metadata;
  */
 class Firebird extends AbstractMetadata
 {
+    protected $columns = [];
+
+    protected $keys = [];
+
     /**
      * The command used to perform a TRUNCATE operation.
      *
